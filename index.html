@@ -1,529 +1,19 @@
 <!DOCTYPE html>
-<html>
-<title><Paper Bridges NC
-body {
-   background: #ffcccc;
-}
-
-.letters-container {
-    background-color: #004466;
-  }
-  .footer {
-    background-color:#fadadd;
-}
-.google_input {
-  padding: 0.5rem 1rem;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  outline: 0;
-  border: 1px solid #F1F3F4;
-  background: #F1F3F4;
-  transition: all 200ms;
-  width: 60%;
-  margin: 0.5rem 0.5rem;
-  margin-left: 0;
-  z-index: -1;
-}
-.google_input:focus {
-  background: #FFF;
-  box-shadow: 1px 3px 5px 1px #e1e1e1;
-  border-color: #F1F3F4;
-}
-.group {
-  display: block;
-}
-label {
-  width: fit-content;
-  margin: 0.5rem;
-  display: block;
-  font-size: 1.2rem;
-  margin-bottom: -3px;
-  margin-left: 16px;
-  font-family: Sans-Serif;
-  font-weight: 300;
-  z-index: 1;
-}
-label:hover {
-  cursor: pointer;
-}
-.formBtn {
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  background: #F1F3F4;
-  border: 1px solid #F1F3F4;
-  color: #000;
-  margin: 1rem;
-  margin-left: 0;
-  transition: all 200ms;
-}
-.formBtn:hover {
-  cursor: pointer;
-  background: #abf2b0;
-  color: #000;
-  border-color: #abf2b0;
-  box-shadow: 1px 2px 5px 0px #e1e1e1;
-}
-.formBtn:focus {
-  outline: none;
-  background: #6add8f;
-  border: 1px solid #6add8f;
-}
-.iframe-container {
-  overflow: hidden;
-  // Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625)
-  padding-top: 56.25%;
-  position: relative;
-}
- 
-.iframe iframe {
-   border: 0;
-   height: 100%;
-   left: 0;
-   position: absolute;
-   top: 0;
-   width: 100%;
-}
-  .header-logo {
-  align-self: center;
-  margin-left: 2rem;
-}
-#logo {
-  transition: all 0.5s ease-out;
-}
-
-#logo:hover {
-  transform: perspective(400px) translate3d(-10px, 0px, -10px) scale(0.93);
-}
-.header-letter {
-  font-size: 30px;
-  color: #6a4a39;
-</style>
-</title>
+<html lang="en">
+<title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-  height: 100%;
-  color: #7;
-  line-height: 1.5;
-  size: 50px;
-}
-  body {
-  margin:0;
-}
-
-h1 {
-  font-family: 'Helvetica', sans-serif;
-  font-weight:300;
-  letter-spacing: 2px;
-  font-size:48px;
-}
-p {
-  font-family: 'Helvetica', sans-serif;
-  letter-spacing: 1px;
-  font-size:14px;
-  color: #333333;
-}
-
-.header {
-  position:relative;
-  text-align:center;
-  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
-  color:white;
-}
-.logo {
-  width:50px;
-  fill:white;
-  padding-right:15px;
-  display:inline-block;
-  vertical-align: middle;
-}
-
-.inner-header {
-  height:65vh;
-  width:100%;
-  margin: 0;
-  padding: 0;
-}
-
-.flex { /*Flexbox for containers*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.waves {
-  position:relative;
-  width: 100%;
-  height:15vh;
-  margin-bottom:-7px; /*Fix for safari gap*/
-  min-height:100px;
-  max-height:150px;
-}
-
-.content {
-  position:relative;
-  height:20vh;
-  text-align:center;
-  background-color: yellow;
-}
-
-/* Animation */
-
-.parallax > use {
-  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
-}
-.parallax > use:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 7s;
-}
-.parallax > use:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 10s;
-}
-.parallax > use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 13s;
-}
-.parallax > use:nth-child(4) {
-  animation-delay: -5s;
-  animation-duration: 20s;
-}
-@keyframes move-forever {
-  0% {
-   transform: translate3d(-90px,0,0);
-  }
-  100% { 
-    transform: translate3d(85px,0,0);
-  }
-}
-/*Shrinking for mobile*/
-@media (max-width: 768px) {
-  .waves {
-    height:40px;
-    min-height:40px;
-  }
-  .content {
-    height:30vh;
-  }
-  h1 {
-    font-size:24px;
-  }
-
-}
-
-#carousel {
-  max-width: 600px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0px 10px;
-}
-
-#carousel label, a {
-  color: teal;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-#carousel label:hover, a:hover {
-  color: #000;
-}
-
-#carousel label, #active, img { -moz-user-select:none;-webkit-user-select:none; }
-
-.catch { display: block; height: 0; overflow: hidden; }
-
-#slider {
-  margin: 0 auto;
-}
-
-#carousel .info {
-  line-height: 20px;
-  position: absolute;
-  font-style: italic;
-  padding: 30px;
-  opacity: 0;
-  color: #000;
-  text-align: left;
-}
-
-#carousel .info h3 {
-  color: #fff;
-  margin: 0 0 5px;
-  font-weight: normal;
-  font-size: 22px;
-  font-style: normal;
-}
-
-#carousel input {
-  display: none;
-}
-
-#slide1:checked ~ #slides .inner { margin-left:0; }
-#slide2:checked ~ #slides .inner { margin-left:-100%; }
-#slide3:checked ~ #slides .inner { margin-left:-200%; }
-#slide4:checked ~ #slides .inner { margin-left:-300%; }
-#slide5:checked ~ #slides .inner { margin-left:-400%; }
-#slide6:checked ~ #slides .inner { margin-left:-400%; }
-#slide7:checked ~ #slides .inner { margin-left:-400%; }
-
-#overflow {
-  width: 100%;
-  overflow: hidden;
-}
-
-#slides article img {
-  width: 100%;
-}
-
-#slides .inner {
-  width: 500%;
-  line-height: 0;
-}
-
-#slides article {
-  width: 20%;
-  float: left;
-}
-
-#active {
-  margin: 10px 0 0;
-  text-align: center;
-}
-
-#active label {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 4px;
-  background: #bbb;
-}
-
-#active label:hover {
-  background: #ccc;
-  border-color: #777 !important;
-}
-
-#controls label:hover {
-  opacity: 0.8;
-}
-
-#slide1:checked ~ #active label:nth-child(1),
-#slide2:checked ~ #active label:nth-child(2),
-#slide3:checked ~ #active label:nth-child(3),
-#slide4:checked ~ #active label:nth-child(4),
-#slide5:checked ~ #active label:nth-child(5)
-#slide6:checked ~ #active label:nth-child(6),
-#slide7:checked ~ #active label:nth-child(7) {
-  background: #333;
-  border-color: #333 !important;
-}
-
-#slides {
-  margin: 30px 0px 0px 0px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  background: #f8f8f8;
-}
-
-#slides .inner {
-  -webkit-transform: translateZ(0);
-  -webkit-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
-  -moz-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
-    -ms-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
-     -o-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000); 
-        transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
-
-  -webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
-  -moz-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
-    -ms-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
-     -o-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000); 
-        transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
-}
-
-#slider {
-  -webkit-transform: translateZ(0);
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-}
-
-#slide1:checked ~ #slides article:nth-child(1) .info,
-#slide2:checked ~ #slides article:nth-child(2) .info,
-#slide3:checked ~ #slides article:nth-child(3) .info,
-#slide4:checked ~ #slides article:nth-child(4) .info,
-#slide5:checked ~ #slides article:nth-child(5) .info {
-  opacity: 1;
-  -webkit-transition: all 1s ease-out 0.6s;
-  -moz-transition: all 1s ease-out 0.6s;
-  -o-transition: all 1s ease-out 0.6s;
-  transition: all 1s ease-out 0.6s;
-}
-
-.info, #controls, #slides, #active, #active label, .info h3, .desktop, .tablet, .mobile {
-  -webkit-transform: translateZ(0);
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-}
-/* "Automagic" image grid using no media queries */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 4rem;
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  margin-bottom: 6rem;
-}
-
-@media (max-width: 30.625em) {
-  .projects-section {
-    padding: 6rem 1rem;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.project {
-  background: var(--main-gray);
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  border-radius: 2px;
-}
-
-.code {
-  color: var(--main-gray);
-  transition: color 0.3s ease-out;
-}
-
-.project:hover .code {
-  color: #ff7f50;
-}
-
-.project-image {
-  height: calc(100% - 6.8rem);
-  width: 100%;
-  object-fit: cover;
-}
-
-.project-title {
-  font-size: 2rem;
-  padding: 2rem 0.5rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 1rem 2rem;
-  border-radius: 2px;
-}
-
-.btn-show-all {
-  font-size: 2rem;
-  background: var(--main-gray);
-  transition: background 0.3s ease-out;
-}
-
-.btn-show-all:hover {
-  background: var(--main-red);
-}
-
-.btn-show-all:hover > i {
-  transform: translateX(2px);
-}
-
-.btn-show-all > i {
-  margin-left: 10px;
-  transform: translateX(0);
-  transition: transform 0.3s ease-out;
-}
-    /* Custom properties/variables  */
-:root {
-  --main-white: #aec6cf;
-  --main-red:#ffbf7e;
-  --main-blue:#ffe5ca;
-  --main-gray:#ffe5ca;
-}
-
-/* Base reset */
-* {
-  margin: 0;
-  padding: 0;
-}
-
-/* box-sizing and font sizing */
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-html {
-  box-sizing: border-box;
-
-  /* Set font size for easy rem calculations
-   * default document font size = 16px, 1rem = 16px, 100% = 16px
-   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
-  */
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-
-/* A few media query to set some font sizes at different screen sizes.
- * This helps automate a bit of responsiveness.
- * The trick is to use the rem unit for size values, margin and padding.
- * Because rem is relative to the document font size
- * when we scale up or down the font size on the document
- * it will affect all properties using rem units for the values.
-*/
-
-/* I am using the em unit for breakpoints
- * The calculation is the following
- * screen size divided by browser base font size
- * As an example: a breakpoint at 980px
- * 980px / 16px = 61.25em
-*/
-
-/* 1200px / 16px = 75em */
-@media (max-width: 75em) {
-  html {
-    font-size: 60%;
-  }
-}
-
-/* 980px / 16px = 61.25em */
-@media (max-width: 61.25em) {
-  html {
-    font-size: 58%;
-  }
-}
-
-/* 460px / 16px = 28.75em */
-@media (max-width: 28.75em) {
-  html {
-    font-size: 55%;
-  }
-}
-
-}
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
 </style>
 <body>
-  
-  <!--Logo Airplane -->
+<!--Logo Airplane -->
   <div class="header-logo">
-            <svg id="logo" width="150" height="42" viewBox="0 0 41 22" fill="   #FFC0CB">
+            <svg id="logo" width="150" height="42" viewBox="0 0 41 22" fill="	#FFC0CB">
                 <path d="M33.7857 18.6786C33.739 18.6552 33.6903 18.6252 33.6399 18.5889C31.7025 17.4062 27.6816 15.275 25.9746 15.5536C24.9235 17.4362 23.9189 19.5535 23.2857 21C18.4456 18.9651 7.21239 12.1163 1 1L39.268 6.25659C39.5365 6.25356 39.7837 6.28434 40 6.35714L39.268 6.25659C37.6925 6.27436 35.3842 7.45629 34.2857 8.14286C35.2571 10.2857 34.3571 16.0595 33.7857 18.6786Z" fill="#e0ffff" />
                 <path d="M1 1L40 6.35714C38.5143 5.85714 35.5714 7.33929 34.2857 8.14286M1 1L29.3571 11.3571M1 1L34.2857 8.14286M1 1C7.21239 12.1163 18.4456 18.9651 23.2857 21C23.9189 19.5535 24.9235 17.4362 25.9746 15.5536M29.3571 11.3571C30.3571 13.5595 32.6429 18.1071 33.7857 18.6786M29.3571 11.3571C28.5217 11.4345 27.2158 13.3304 25.9746 15.5536M33.7857 18.6786C34.3571 16.0595 35.2571 10.2857 34.2857 8.14286M33.7857 18.6786C31.9116 17.5179 27.7257 15.2679 25.9746 15.5536" stroke="#FF8989"></svg>
   <!-- Navbar (sit on top) -->
@@ -532,35 +22,53 @@ html {
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"/></i>
     </a>
-    <a href="#home" class="w3-bar-item w3-button">PAPER BRIDGES</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class=""></i> ABOUT</a>
+    <a href="https://paperbridges.github.io" class="w3-bar-item w3-button">PAPER BRIDGES</a>
+    <a href="https://paperbridges.github.io" class="w3-bar-item w3-button w3-hide-small"><i class=""></i> ABOUT</a>
+    <a href="#home" class="w3-bar-item w3-button w3-hide-small"><i class=""></i> GET INVOLVED</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class=></i> CONTACT</a>
     <a href="https://paperbridges.github.io/topcards/" class="w3-bar-item w3-button w3-hide-small"><i class=""></i> X-MAS CARDS </a>
-      <a href="https://paperbridges.github.io/writeletter/" class="w3-bar-item w3-button w3-hide-small"><i class=""></i> GET INVOLVED </a>
+    
    </div>
 </div>
     </a>
   </div></right>
-
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-  
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#helpus" class="w3-bar-item w3-button" onclick="toggleFunction()">HELP US</a>
+    <a href="https://paperbridges.github.io" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
+    <a href="https://paperbridges.github.io" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#" class="w3-bar-item w3-button" onclick="toggleFunction()">GET INVOLVED</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
     <a href="https://paperbridges.github.io/topcards/" class="w3-bar-item w3-button" onclick="toggleFunction()">X-MAS </a>
-<a href="https://paperbridges.github.io/writeletter/" class="w3-bar-item w3-button" onclick="toggleFunction()">GET INVOLVED </a>
- <!-- Container (Help Section) -->
-<div class="w3-content w3-container w3-padding-64"id="helpus">
+
+    
+  </div>
+</div>
+  <!-- The Tour Section -->
+  <div class="w3-light-grey" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:100%">
+<!-- Page content -->
+<div class="w3-content w3-white" style="max-width:2000px;margin-top:46px">
+<img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/s960x960/87405160_972143256516644_2199779156911194112_o.jpg?_nc_cat=110&_nc_sid=8024bb&_nc_ohc=GgEn1j0h9iIAX_gSeS7&_nc_ht=scontent-atl3-1.xx&_nc_tp=7&oh=26320f38fb90af7602b984630b871551&oe=5EB585DB" class="w3-round" alt="PB" style="width:100%">
+  <!-- The Intro Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" >
+    <h2 class="w3-wide">HELP US</h2>
+    <p class="w3-wide"> Just five minutes of your time can show an orphan that they are loved and cared for.</p></div></div>
+   <!-- Container (Help Section) -->
+<div class="w3-content w3-container w3-padding-64">
   <h1 class="w3-center w3-wide"><b>How You Can Help</b></h1>
   <h4 class="w3-center"><em>“Not all of us can do great things. But we can do small things with great love.”</em>
-    <br><br>Mother Teresa</h4><br>
-  <BR> <h2><center><b><mark>Just five minutes of your time can show an orphan that they are loved and cared for.</b></h2><br><BR></mark>
-    <h3><b>Write Letters</b></h3>
- <h4> Help us write letters to orphans around the world in orphanages like Orphan's Hope, CASA Guatemala, and Our Little Roses. We will proofread and word check it for you. Be encouraging! Let the orphans know that you are looking out for them. Each letter should be from 100 to 500 words. A few suggestions: </h4>
+    <br><br>Mother Teresa</h4></div></div>
+  <!--Write Letters-->
+  <div class="w3-container w3-content w3-white" style="max-width:90%" id="band">
+ <h3><a href='https://docs.google.com/forms/d/e/1FAIpQLSeBtlLGTdHrbGYLWVq9Thdq-NBmNE6gojxZ1eqw_T8J7a3wYg/viewform?embedded=true'><b>Write Letters</b></h3></a>
+ <p><em>If you would like to handwrite a letter and include a photo, please email a scanned copy of the letter to <i>letters@paper-bridges.org. </i>For any questions, please email or see any of our officers. </p></em>
+</script>
+ <h4> Help us write letters to orphans around the world in orphanages like Orphan's Hope, CASA Guatemala, and Our Little Roses. We will proofread and word check it for you. </h4><br>
+ <h4>Be encouraging! Let the orphans know that you are looking out for them. Each letter should be from <b>100 to 500 words.</b> A few suggestions: </h4>
 <p>Get them to know you: Where are you from? Share your hobbies or daily activities</p>
 <p>Talk about school, sports, friends, or your hidden talents.</p><br>
-<h4> Still not sure what to write? Here are some <a href="https://www.paper-bridges.org/sample-letters.html"><b>examples</b></a></h4>
+<h4> Here are some <a href="https://www.paper-bridges.org/sample-letters.html"><b>examples</b></a></h4>
     <img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/s960x960/77285668_103023884512650_7487012476723134464_o.jpg?_nc_cat=103&_nc_ohc=S4wSVFGGrngAQk0z_H0rLXq7DAzfsBaVEp3NbTHwe4bcMjvg5wyoJW_rA&_nc_ht=scontent-atl3-1.xx&oh=6bac084d34820092a1fbbf99f9c6ea56&oe=5E875B4F"style="width:92%"style="length:82%">
 	 
  <!---Table--->
@@ -587,51 +95,25 @@ table, th, td {
 }
 </style>
   </b></table></center>
-</a><br>
+</a><br><Br><br><br>
     <h3><b>Donations</b></h3>
-   <h4>Please donate to us through <a href="https://www.networkforgood.org/donation/MakeDonation.aspx?ORGID2=161724012&vlrStratCode=ZV%2brCOTdwPTsBz3TSZAfKUN9Qq%2fbzociP9nu4STG7S%2bpgjsNo6QURX8ia4%2fADjG%2f"<p><b>Network for Good.</b></a> Please title your donation Paper Bridges for your designation. Even a small change can make a difference.</h4>
- </div>
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-}
-
-.container img {
-  width: 100%;
-  height: auto;
-}
-
-.container .btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #555;
-  color: white;
-  font-size: 16px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.container .btn:hover {
-  background-color: black;
-}
-</style>
-</head>
-<body>
-
-<h2>$135 Donated</h2>
+   <h4>Donate to our Vinh Son kids through <a href="https://www.networkforgood.org/donation/MakeDonation.aspx?ORGID2=161724012&vlrStratCode=ZV%2brCOTdwPTsBz3TSZAfKUN9Qq%2fbzociP9nu4STG7S%2bpgjsNo6QURX8ia4%2fADjG%2f"<p><b>Network for Good.</b></a> Please title your donation Paper Bridges for your designation. All donations are tax-deductible, and will go directly to our orphanages.</h4><br><br>
+<center><h1>$135 Donated</h1></center>
 <div class="container">
   <img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/s960x960/87332187_972139359850367_2639186192834232320_o.jpg?_nc_cat=105&_nc_sid=8024bb&_nc_ohc=1pEdGfWo2ewAX-ZFQ6H&_nc_ht=scontent-atl3-1.xx&_nc_tp=7&oh=6672de5d82c1a31a943043c6488b73f2&oe=5EF48AF5" alt="PB" style="width:100%">
-  <button class="btn">Thank you! </button>
 </div>
+
+ <br><br><br><br><br><br></div>
+<!-- Footer -->
+	<br><br><br><br>
+	<footer class="w3-center w3-padding-64">
+  <div class="w3-xlarge w3-section">
+    <div class="w3-large w3-section">
+    <i class="fa fa-instagram w3-hover-opacity"><a href="https://www.instagram.com/p/B7L3tALHSzG/" target="_blank"> Instagram</a></i>
+    
+  </div>
+  <p><space></space><small>  &#169; Copyrighted PaperBridges NC | 2019 |</small></p>
+    
+</footer>
+ 
+<script>
