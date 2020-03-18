@@ -1,91 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
-<title>Paper Bridges</title>
-<style>
-body {
-   background: #ffeae8;
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", Roboto}
-body, html {
-  height: 100%;
-  color: #7;
-  line-height: 1.5;
-  size: 50px;
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Paper Bridges NC</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+<style>body{
+  margin: 0;
+  padding: 0;
+  background: #ffeae8;
+  font-family: "Montserrat";
 }
 
+.navbar{
+  position: fixed;
+  height: 80px;
+  overflow: hidden;
+  top: 0;
+  display: flex;
+  align-items: center;
+  background: #f1f1f1;
+  width: 100%;
+}
+.logo{
+  background: url(logo.png) no-repeat 50% 50%;
+  background-size: contain;
+  width: 180px;
+  height: 18px;
+  float: left;
+  margin-left:20px;
+}
+.menu{
+  position: absolute;
+  right: 20px;
+}
+.menu a{
+  color: #333;
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 20px;
+  transition: color 0.3s;
+  text-transform: uppercase;
+}
+.menu a:hover{
+  color: #6ab04c;
+}
+.header{
+  width: 100%;
+  height: 600px;
+  background: url(bg.png) no-repeat 50% 50%;
+  background-size: cover;
+  margin-top: 80px;
+}
+.btn{
+  display: none;
+  position: absolute;
+  right: 20px;
+}
+.btn:hover > span{
+  background: #6ab04c;
+}
+.btn span{
+  display: block;
+  margin: 6px;
+  width: 40px;
+  height: 3px;
+  background: #333;
+}
+p{
+  padding: 20px;
+  font-size: 20px;
+  text-align: justify;
+
+}
+@media only screen and (max-width : 600px) {
+  .navbar{
+    overflow: visible;
+  }
+  .menu{
+    width: 100%;
+    right: 0;
+    top: 80px;
+    background: #f1f1f1;
+    overflow: hidden;
+    max-height: 0;
+  }
+  .menu a{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+  }
+  .btn{
+    display: block;
+    cursor: pointer;
+  }
+  .show{
+    max-height: 500px;
+  }
 }
 </style>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: "Lato", Roboto}
-.mySlides {display: none}
-</style>
-<body>
-<!--Logo Airplane -->
+  <body>
+<div class="navbar">
+ <!--Logo Airplane -->
   <div class="header-logo">
             <svg id="logo" width="150" height="42" viewBox="0 0 41 22" fill="	#FFC0CB">
                 <path d="M33.7857 18.6786C33.739 18.6552 33.6903 18.6252 33.6399 18.5889C31.7025 17.4062 27.6816 15.275 25.9746 15.5536C24.9235 17.4362 23.9189 19.5535 23.2857 21C18.4456 18.9651 7.21239 12.1163 1 1L39.268 6.25659C39.5365 6.25356 39.7837 6.28434 40 6.35714L39.268 6.25659C37.6925 6.27436 35.3842 7.45629 34.2857 8.14286C35.2571 10.2857 34.3571 16.0595 33.7857 18.6786Z" fill="#e0ffff" />
-                <path d="M1 1L40 6.35714C38.5143 5.85714 35.5714 7.33929 34.2857 8.14286M1 1L29.3571 11.3571M1 1L34.2857 8.14286M1 1C7.21239 12.1163 18.4456 18.9651 23.2857 21C23.9189 19.5535 24.9235 17.4362 25.9746 15.5536M29.3571 11.3571C30.3571 13.5595 32.6429 18.1071 33.7857 18.6786M29.3571 11.3571C28.5217 11.4345 27.2158 13.3304 25.9746 15.5536M33.7857 18.6786C34.3571 16.0595 35.2571 10.2857 34.2857 8.14286M33.7857 18.6786C31.9116 17.5179 27.7257 15.2679 25.9746 15.5536" stroke="#FF8989"></svg>
-  <!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"/></i>
-    </a>
-    <a href="https://paperbridges.github.io" class="w3-bar-item w3-button">PAPER BRIDGES</a>
-    <a href="https://paperbridges.github.io/about/" class="w3-bar-item w3-button w3-hide-small"><i class=""></i> ABOUT</a>
-    <a href="https://paperbridges.github.io/writeletter/" class="w3-bar-item w3-button w3-hide-small"><i class=""></i> GET INVOLVED</a>
-    <a href="https://paperbridges.github.io/#contact" class="w3-bar-item w3-button w3-hide-small"><i class=></i> CONTACT</a>
-    <a href="https://paperbridges.github.io/topcards/" class="w3-bar-item w3-button w3-hide-small"><i class=""></i> X-MAS CARDS </a>
-    
-   </div>
+                <path d="M1 1L40 6.35714C38.5143 5.85714 35.5714 7.33929 34.2857 8.14286M1 1L29.3571 11.3571M1 1L34.2857 8.14286M1 1C7.21239 12.1163 18.4456 18.9651 23.2857 21C23.9189 19.5535 24.9235 17.4362 25.9746 15.5536M29.3571 11.3571C30.3571 13.5595 32.6429 18.1071 33.7857 18.6786M29.3571 11.3571C28.5217 11.4345 27.2158 13.3304 25.9746 15.5536M33.7857 18.6786C34.3571 16.0595 35.2571 10.2857 34.2857 8.14286M33.7857 18.6786C31.9116 17.5179 27.7257 15.2679 25.9746 15.5536" stroke="#FF8989"</svg>
 </div>
-    </a>
-  </div></right>
-    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-	
-     <a href="https://paperbridges.github.io/" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
-    <a href="https://paperbridges.github.io/about/" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="https://paperbridges.github.io/writeletter/" class="w3-bar-item w3-button" onclick="toggleFunction()">GET INVOLVED</a>
-    <a href="https://paperbridges.github.io/#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-    <a href="https://paperbridges.github.io/topcards/" class="w3-bar-item w3-button" onclick="toggleFunction()">X-MAS </a>
-
-
-    
-  </div>
+<a class="btn">
+<span></span>
+<span></span>
+<span></span>
+</a>
+<div class="menu">
+  <a href="https://paperbridges.github.io/">Paper Bridges</a>
+  <a href="https://paperbridges.github.io/about/">About</a>
+  <a href="https://paperbridges.github.io/writeletter/">Get Involved</a>
+    <a href="https://paperbridges.github.io/topcards/">Featured Cards</a>
+  <a href="https://us4.list-manage.com/survey?u=d754b271370570a82ea846f79&id=1a1a0e5b6c">Contact</a>
 </div>
-  <!-- The First Section -->
-  <div class="w3-light-grey" id="tour">
+</div>
+<div class="header">
+<!-- The Tour Section -->
+  <div class="w3-light-pink" id="tour">
     <div class="w3-container w3-content w3-padding-64" style="max-width:100%">
-	    
 <!-- Page content -->
 <div class="w3-content w3-white" style="max-width:2000px;margin-top:46px">
 <img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/s960x960/87405160_972143256516644_2199779156911194112_o.jpg?_nc_cat=110&_nc_sid=8024bb&_nc_ohc=GgEn1j0h9iIAX_gSeS7&_nc_ht=scontent-atl3-1.xx&_nc_tp=7&oh=26320f38fb90af7602b984630b871551&oe=5EB585DB" class="w3-round" alt="PB" style="width:100%">
   <!-- The Intro Section -->
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" >
-    <h2 class="w3-wide">HELP US</h2>
+    <h2 class="w3-wide"><b>HELP US</b></h2>
     <p class="w3-wide"> Just five minutes of your time can show an orphan that they are loved and cared for.</p></div></div>
-  
-	    <!-- Container (Help Section) -->
+   <!-- Container (Help Section) -->
 <div class="w3-content w3-container w3-padding-64">
-  <h1 class="w3-center w3-wide"><b>How You Can Help</b></h1>
-  <h4 class="w3-center"><em>“Not all of us can do great things. But we can do small things with great love.”</em>
-    <br><br>Mother Teresa</h4></div></div>
-	  
+  <center><h1 class="w3-center w3-wide"><b>How You Can Help</b></h1></center>
+  <center><h4 class="w3-center"><em>“Not all of us can do great things. But we can do small things with great love.”</em>
+    <br><br>Mother Teresa</h4></center></div></div>
   <!--Write Letters-->
   <div class="w3-container w3-content w3-white" style="max-width:90%" id="band">
  <h3><a href='https://docs.google.com/forms/d/e/1FAIpQLSeBtlLGTdHrbGYLWVq9Thdq-NBmNE6gojxZ1eqw_T8J7a3wYg/viewform?embedded=true'><b>Write Letters</b></h3></a>
- <p><em>If you would like to handwrite a letter and include a photo, please email a scanned copy of the letter to <i>letters@paper-bridges.org. </i>For any questions, please email or see any of our officers. </p></em>
-</script>
- <h4> Help us write letters to orphans around the world in orphanages like Orphan's Hope, CASA Guatemala, and Our Little Roses. We will proofread and word check it for you. </h4><br>
- <h4>Be encouraging! Let the orphans know that you are looking out for them. Each letter should be from <b>100 to 500 words.</b> A few suggestions: </h4>
-<p>Get them to know you: Where are you from? Share your hobbies or daily activities</p>
-<p>Talk about school, sports, friends, or your hidden talents.</p><br>
-<h4> Here are some <a href="https://www.paper-bridges.org/sample-letters.html"><b>examples</b></a></h4>
+ <h3>
+ If you would like to handwrite a letter and include a photo, please email a scanned copy of the letter to letters@paper-bridges.org.</h3>
+ <h3>
+ Help us write letters to orphans around the world in orphanages like Orphan's Hope, CASA Guatemala, and Our Little Roses. We will proofread and word check it for you. </h3><br>
+ <h3>
+ Be encouraging! Let the orphans know that you are looking out for them. Each letter should be from <b>100 to 500 words.</b> A few suggestions: </h3>
+<p>
+Get them to know you: Where are you from? Share your hobbies or daily activities</p>
+<p>
+Talk about school, sports, friends, or your hidden talents.</p><br>
+<h4> 
+ Here are some <a href="https://www.paper-bridges.org/sample-letters.html"><b>examples</b></a></h4>
     <img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/s960x960/77285668_103023884512650_7487012476723134464_o.jpg?_nc_cat=103&_nc_ohc=S4wSVFGGrngAQk0z_H0rLXq7DAzfsBaVEp3NbTHwe4bcMjvg5wyoJW_rA&_nc_ht=scontent-atl3-1.xx&oh=6bac084d34820092a1fbbf99f9c6ea56&oe=5E875B4F"style="width:92%"style="length:82%">
 	 
  <!---Table--->
@@ -114,24 +184,32 @@ table, th, td {
   </b></table></center>
 </a><br><Br><br><br>
     <h3><b>Donations</b></h3>
-   <h4>Donate to our Vinh Son kids through <a href="https://www.networkforgood.org/donation/MakeDonation.aspx?ORGID2=161724012&vlrStratCode=ZV%2brCOTdwPTsBz3TSZAfKUN9Qq%2fbzociP9nu4STG7S%2bpgjsNo6QURX8ia4%2fADjG%2f"<p><b>Network for Good.</b></a> Please title your donation Paper Bridges for your designation. All donations are tax-deductible, and will go directly to our orphanages.</h4><br>
-<h4>Donate to our main website through <a href="https://www.paper-bridges.org/donate.html"<p><b>Global Giving.</b></a></h4><br><br>
+   <h4>Donate to our Vinh Son kids through <a href="https://www.networkforgood.org/donation/MakeDonation.aspx?ORGID2=161724012&vlrStratCode=ZV%2brCOTdwPTsBz3TSZAfKUN9Qq%2fbzociP9nu4STG7S%2bpgjsNo6QURX8ia4%2fADjG%2f"<p><b>Network for Good.</b></a> Please title your donation Paper Bridges for your designation. All donations are tax-deductible, and will go directly to our orphanages.</h4>
+     <h4>Donate to us at <a href="https://www.globalgiving.org/projects/send-letters-to-orphans-worldwide/"<p><b>Global Giving.</b></a>Donations are tax-deductible, and will go into our support our supplies.</h4><br><br>
 <center><h1>$135 Donated</h1></center>
 <div class="container">
   <img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/s960x960/87332187_972139359850367_2639186192834232320_o.jpg?_nc_cat=105&_nc_sid=8024bb&_nc_ohc=1pEdGfWo2ewAX-ZFQ6H&_nc_ht=scontent-atl3-1.xx&_nc_tp=7&oh=6672de5d82c1a31a943043c6488b73f2&oe=5EF48AF5" alt="PB" style="width:100%">
-</div>
-
+</div><br><br><br>
+ <h3><b>Form a Letter Writing Circle</b></h3>
+   <h4>1. We love it when communities come together! Invite a group of friends, co-workers, or classmates to write letters with.</h4>
+    <h4>2. Collect signatures, pictures, and letters as proof for club registration</h4>
+    <h4>3. If you are interested in starting a school chapter, apply to become a group. We will assist you during this important transition, but the club requirements should be embedded within your school's website.</h4><br>
+    <h4>Don't be shy! Have a question? Email us. A couple months ago, we were lost just like you. However, just like the old saying goes, "Have courage to be kind." Email us at <a href="mailto:paperbrdigesnc@gmail.com"<p><b>paperbridgesnc@gmail.com</b></a></h4>
+ <p><center>  
+    &#169; Copyrighted PaperBridges NC | 2019 |</p></center>
+    
  <br><br><br><br><br><br></div>
+    </div></div></div></div>
 <!-- Footer -->
-	<br><br><br><br>
-	<footer class="w3-center w3-padding-64">
-  <div class="w3-xlarge w3-section">
-    <div class="w3-large w3-section">
-    <i class="fa fa-instagram w3-hover-opacity"><a href="https://www.instagram.com/p/B7L3tALHSzG/" target="_blank"> Instagram</a></i>
-    
-  </div>
-  <p><space></space><small>  &#169; Copyrighted PaperBridges NC | 2019 |</small></p>
-    
-</footer>
- 
-<script>
+
+<script type="text/javascript">
+
+$(".btn").on("click",function(){
+  $('.menu').toggleClass("show");
+});
+
+
+</script>
+  </body>
+</html>
+
